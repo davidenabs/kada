@@ -1,24 +1,71 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 
-const LandStats: React.FC = () => {
+const LandStatsCarousel: React.FC = () => {
+    const [activeSlide, setActiveSlide] = useState(0);
+
+    // Carousel content data (you can add more slides if needed)
+    const slides = [
+        {
+            title: "4.5 Million Hectares (97%) Arable Land",
+            description: "2.9 Million Hectares (65%) under cultivation"
+        },
+        {
+            title: "500,000 Farmers in the Region",
+            description: "Cultivating vast lands across multiple areas"
+        },
+        {
+            title: "World's Best Agro Products",
+            description: "Produced from the most fertile lands"
+        }
+    ];
+
+    // Automatically move to the next slide every 5 seconds
+    useEffect(() => {
+        const interval = setInterval(() => {
+            setActiveSlide((prevSlide) => (prevSlide + 1) % slides.length);
+        }, 5000);
+        return () => clearInterval(interval);
+    }, [slides.length]);
+
+    // Handle manual slide change when clicking indicators
+    const handleSlideChange = (index: number) => {
+        setActiveSlide(index);
+    };
+
     return (
         <section className="flex flex-col w-[62%] max-md:ml-0 max-md:w-full">
-            <div className="flex relative flex-col items-start px-20 pb-32 w-full min-h-[862px] pt-[500px] max-md:px-5 max-md:py-24 max-md:mt-10 max-md:max-w-full">
-                <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/a04c881d182d0bd62d76c0039cad6a47f409a29cc5b4d6301b9aaad89898543e?placeholderIfAbsent=true&apiKey=e3159558e3c24b7bb6f2db02f0873db3" className="object-cover absolute inset-0 size-full" alt="Aerial view of arable land" />
+        <div className="relative w-full min-h-[862px] max-md:max-w-full">
+            {/* Content Wrapper with a fixed height */}
+            <div className="flex flex-col items-start px-20 pb-32 w-full h-[700px] pt-[500px] max-md:px-5 max-md:py-24 max-md:mt-10">
+                {/* Slide content */}
                 <h1 className="relative text-4xl font-medium leading-10 text-emerald-50 w-[312px]">
-                    4.5 Million Hectres (97%) Arable Land
+                    {slides[activeSlide].title}
                 </h1>
                 <p className="relative mt-5 text-lg leading-6 text-amber-300 w-[329px]">
-                    2.9 Million Hectres (65%) under cultivation
+                    {slides[activeSlide].description}
                 </p>
-                <div className="flex relative gap-3 mt-9">
-                    <div className="flex shrink-0 bg-green-500 rounded-lg h-[9px] w-[94px]" role="progressbar" aria-valuenow={65} aria-valuemin={0} aria-valuemax={100} />
-                    <div className="flex shrink-0 rounded-lg bg-zinc-300 bg-opacity-30 h-[9px] w-[94px]" />
-                    <div className="flex shrink-0 rounded-lg bg-zinc-300 bg-opacity-30 h-[9px] w-[94px]" />
-                </div>
             </div>
-        </section>
+
+            {/* Indicators */}
+            <div className="absolute bottom-36 left-0 flex gap-3 mt9 px-20">
+                {slides.map((_, index) => (
+                    <div
+                        key={index}
+                        onClick={() => handleSlideChange(index)}
+                        className={`flex shrink-0 rounded-lg h-[9px] w-[94px] cursor-pointer ${
+                            activeSlide === index ? 'bg-green-500' : 'bg-zinc-300 bg-opacity-30'
+                        }`}
+                        role="progressbar"
+                        aria-valuenow={activeSlide === index ? 100 : 0}
+                        aria-valuemin={0}
+                        aria-valuemax={100}
+                    />
+                ))}
+            </div>
+        </div>
+    </section>
+
     );
 };
 
-export default LandStats;
+export default LandStatsCarousel;

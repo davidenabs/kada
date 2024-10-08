@@ -7,3 +7,5 @@ export { default as Lock } from "./lock.svg";
 export { default as FilledArrowRight } from "./filled-arrow-right.svg";
 export { default as SearchIcon } from "./search.svg";
 export { default as OfficeIcon } from "./office.svg";
+export { default as UserIcon } from "./user.svg";
+export { default as UsersIcon } from "./users.svg";
