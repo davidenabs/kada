@@ -1,4 +1,4 @@
-import { Input as RizzInput, Textarea as RizzTextarea } from 'rizzui';
+import { Textarea as RizzTextarea } from 'rizzui';
 
 type InputProps = {
     placeholder: string;

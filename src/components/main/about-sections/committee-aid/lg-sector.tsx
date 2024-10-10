@@ -3,11 +3,9 @@
 import Select from '@/components/form/select';
 import React, { useState } from 'react';
 
-interface LocalGovernmentSelectorProps { }
+const LocalGovernmentSelector: React.FC = () => {
 
-const LocalGovernmentSelector: React.FC<LocalGovernmentSelectorProps> = () => {
-
-    const [localGovernment, setLocalGovernment] = useState('');
+    const [localGovernment, setLocalGovernment] = useState('Sabon Tasha');
 
     return (
         <div className="flex flex-col md:self-start self-center text-sm">
@@ -15,7 +13,7 @@ const LocalGovernmentSelector: React.FC<LocalGovernmentSelectorProps> = () => {
                 Select Local Government
             </label>
             <div className="flex flex-col mt-3 w-full text-black rounded-none maxw-[391px]">
-                <Select options={[]} value={'Sabon Tasha'} setValue={setLocalGovernment} className='md:w-[391px] w-full !py-2'>
+                <Select options={[]} value={localGovernment} setValue={setLocalGovernment} className='md:w-[391px] w-full !py-2'>
                 </Select>
             </div>
         </div>

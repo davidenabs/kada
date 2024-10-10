@@ -3,9 +3,8 @@ import Button from '@/components/form/button';
 import { useRouter } from 'next/navigation';
 import React from 'react';
 import { Title } from 'rizzui';
-interface CertificationLicenseProps { }
 
-const CertificationLicense: React.FC<CertificationLicenseProps> = () => {
+const CertificationLicense: React.FC = () => {
   const perks = [
     "Access to over 200+ organized cooperatives and farmers",
     "Access to over 200+ organized cooperatives and farmers",
@@ -40,7 +39,7 @@ const CertificationLicense: React.FC<CertificationLicenseProps> = () => {
           </div>
           <div className="flex flex-col md:ml-5 w-[54%] max-md:ml-0 max-md:w-full">
             <img
-              loading="lazy"
+
               src="/images/vendor-cert.png"
               alt="Certification and License illustration"
               className="object-contain mt-4 w-full rounded-3xl aspect-[1.54] max-md:mt-8 max-md:max-w-full"

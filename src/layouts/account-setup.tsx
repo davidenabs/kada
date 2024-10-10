@@ -5,7 +5,7 @@ function AccountSetupLayout({ children }: { children: React.ReactNode }) {
         <Fragment>
             <div className="w-full min-h-screen">
                 <header className='w-full p-12 max-md:px-5'>
-                    <img loading="lazy" src="/images/logo.svg" alt="" className="object-contain aspect-square w-[50px]" />
+                    <img src="/images/logo.svg" alt="" className="object-contain aspect-square w-[50px]" />
                 </header>
                 <div className='w-full'>
                     {children}

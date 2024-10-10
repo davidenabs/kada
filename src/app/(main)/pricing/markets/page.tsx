@@ -1,15 +1,13 @@
 import MarketInformation from '@/components/main/pricing-sections/market';
 import React from 'react'
 
-type Props = {}
-
-const Markets = (props: Props) => {
+const Markets = () => {
     return (
         <div className='bg-[#F2F9F5] app_container py-[113px] md:py-[135px]'>
             <section className="flex flex-col text-2xl font- leading-tight rounded-[32px]">
                 <div className="flex overflow-hidden relative flex-col items-center px-20 pt-20 pb-40 w-full min-h-[294px] h-full bg-green-800 rounded-[32px] max-md:px-5 max-md:pb-24 max-md:max-w-full">
                     <img
-                        loading="lazy"
+
                         src={'/images/market-header.png'}
                         alt=""
                         className="object-cover absolute inset-0 size-full"

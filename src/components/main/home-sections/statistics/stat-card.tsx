@@ -17,7 +17,7 @@ const StatCard: React.FC<StatCardProps> = ({ title, value, subtitle, subtitle2, 
             <div className={`flex flex-col grow pb-9 w-full rounded-3xl ${bgColor} shadow-[0px_4px_36px_rgba(214,214,214,0.25)] max-md:mt-6`}>
                 {title === "Arable Land" && (
                     <img
-                        loading="lazy"
+
                         src="https://cdn.builder.io/api/v1/image/assets/TEMP/9c20e9d273d0f3567dae0f0fffed726ab57797b5ac298ccf60a5d92e8d9481d2?placeholderIfAbsent=true&apiKey=e3159558e3c24b7bb6f2db02f0873db3"
                         alt=""
                         className="object-contain absolute self-end max-w-full aspect[3] w-[129px]"

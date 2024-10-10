@@ -3,7 +3,7 @@ import useScreenSize from '@/hooks/use-screen-size';
 import { UserIcon, UsersIcon } from '@/icons';
 import { createQueryString } from '@/utils/query_utils';
 import { usePathname, useRouter, useSearchParams } from 'next/navigation';
-import React, { useCallback } from 'react';
+import React from 'react';
 
 interface ProfileType {
     icon: React.ReactNode;
@@ -76,9 +76,9 @@ const ProfileTypeSelector: React.FC = () => {
                         className={`flex overflow-hidden flex-col items-start py-4 pr-14 pl-5 mt-6 w-full rounded-lg ${type.type == activeType ? 'bg-white border border-teal-700 border-solid' : 'bg-zinc-50'
                             } max-md:pr-5 transition-all ease-in-out`}
                     >
-                        <div className={`flex gap-1.5 text-base text-left font-bold leading-tight ${type.type== activeType ? 'text-green-800' : 'text-neutral-500'}`}>
+                        <div className={`flex gap-1.5 text-base text-left font-bold leading-tight ${type.type == activeType ? 'text-green-800' : 'text-neutral-500'}`}>
                             {type.icon}
-                            {/* <img loading="lazy" src={type.icon} alt="" className="object-contain shrink-0 w-6 aspect-square" /> */}
+                            {/* <img  src={type.icon} alt="" className="object-contain shrink-0 w-6 aspect-square" /> */}
                             <div className="my-auto">{type.title}</div>
                         </div>
                         <div className="mt-4 text-xs font-light tracking-wide leading-4 text-zinc-600 text-left">

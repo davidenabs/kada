@@ -20,7 +20,7 @@ const FarmManagementFeatures: React.FC = () => {
             <div className="flex gap-5 max-md:flex-col">
                 <div className="flex flex-col w-6/12 max-md:ml-0 max-md:w-full max-md:hidden">
                     <img
-                        loading="lazy"
+
                         src="/images/women-farming-2.png"
                         alt="Farm management illustration"
                         className="object-contain grow w-[604px] aspect-[0.97] rounded-[68px_68px_68px_68px] max-md:mt-10 max-md:max-w-full"

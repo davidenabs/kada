@@ -126,10 +126,8 @@ const MobileNav = () => {
 
 const NavModal = ({
   open,
-  // onClose,
 }: {
   open: boolean;
-  onClose: any;
 }) => {
   const { width } = useScreenSize();
   const [activeTab, setActiveTab] = React.useState(1);

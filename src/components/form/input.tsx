@@ -1,11 +1,11 @@
-import { Input as RizzInput, Textarea as RizzTextarea } from 'rizzui';
+import { Input as RizzInput } from 'rizzui';
 
 type InputProps = {
   type?: "number" | "search" | "text" | "email" | "tel" | "url" | "time" | "date" | "week" | "month" | "datetime-local" | undefined;
   placeholder: string;
   className?: string;
   error?: string;
-  [key: string]: any;
+  [key: string]: unknown;
 };
 
 const Input: React.FC<InputProps> = ({ type = "text", placeholder, className, error = "", ...props }) => (

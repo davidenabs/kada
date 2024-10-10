@@ -8,7 +8,7 @@ const NimcVerification: React.FC = () => {
     return (
         <section className="flex overflow-hidden flex-col justify-center items-center px-10 py-12 bg-white rounded-lg border-[0.5px] border-zinc-400 border-opacity-50 max-w-[624px] max-md:px-5 mx-auto my-auto">
             <div className="flex flex-col items-center max-w-full w-[365px]">
-                <img loading="lazy" src="/images/nimc-logo.png" alt="NIMC Verification Logo" className="object-contain aspect-square w-[87px]" />
+                <img src="/images/nimc-logo.png" alt="NIMC Verification Logo" className="object-contain aspect-square w-[87px]" />
 
                 <h2 className="text-2xl font-bold leading-tight text-zinc-700">
                     NIMC Verification

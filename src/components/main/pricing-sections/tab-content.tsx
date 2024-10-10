@@ -4,9 +4,7 @@ import PriceCalculator from './calculator';
 import PricingInfo from './info';
 
 
-interface LandPricingProps { }
-
-const LandPricing: React.FC<LandPricingProps> = () => {
+const LandPricing: React.FC = () => {
     return (
         <div>
             <PricingInfo />
@@ -20,7 +18,7 @@ const LandPricing: React.FC<LandPricingProps> = () => {
     );
 };
 
-const Stakeholders: React.FC<LandPricingProps> = () => {
+const Stakeholders: React.FC = () => {
     return (
         <div>
             <div className=" mt-24 ml-10 max-w-full font-medium leading-tight text-center max-md:mt-10 flex flex-col items-center">

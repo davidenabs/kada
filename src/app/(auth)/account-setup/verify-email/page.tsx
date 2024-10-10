@@ -14,10 +14,10 @@ const EmailVerificationPage: React.FC = () => {
 
     if (!loaded) { return <AppLoader /> }
 
-    if (userType === "farmer") { route = '/account-setup/profile'; }
-    else if (userType === "guest") { route = '/account-setup/profile/nimc'; }
-    else if (userType === "cooperative") { route = '/account-setup/profile/cooperative'; }
-    else if (userType === "data-enumerator") { route = '/account-setup/profile/data-enumerator'; }
+    if (userType === 'farmer') { route = '/account-setup/profile'; }
+    else if (userType === 'guest') { route = '/account-setup/profile/nimc'; }
+    else if (userType === 'cooperative') { route = '/account-setup/profile/cooperative'; }
+    else if (userType === 'data-enumerator') { route = '/account-setup/profile/data-enumerator'; }
     else { route = '/sign-in'; }
 
     return (

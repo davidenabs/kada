@@ -11,7 +11,7 @@ interface HighlightCardProps {
 const HighlightCard: React.FC<HighlightCardProps> = ({ imageSrc, title, description, date, time }) => {
   return (
     <article className="flex flex-col grow pb-7 w-full text-sm bg-white rounded-lg shadow-[0px_4px_40px_rgba(207,207,207,0.25)] overflow-hidden">
-      <img loading="lazy" src={imageSrc} alt="" className="object-contain w-full aspect-[1.77]" />
+      <img src={imageSrc} alt="" className="object-contain w-full aspect-[1.77]" />
       <div className="flex flex-col px-4 mt-8 w-full max-md:pr-5">
         <h3 className="text-base font-bold leading-5 text-zinc-700">
           {title}

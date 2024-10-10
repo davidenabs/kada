@@ -1,14 +1,9 @@
-import Button from "@/components/form/button";
-import Link from "next/link";
 import React from "react";
-import { Title } from "rizzui";
 
-type Props = {}
-
-const OurMandate = (props: Props) => {
+const OurMandate = () => {
     return (
         <div className="app_container py-[123px] md:py-[165px] items-center flex flex-col md:flex-row relative bg-[#fefffd] max-md:border-b-0 border-b-[12px] border-[#0BCE6B]">
-        <img src="/images/vector-leaf-bg.svg" className="absolute -top-10 right-28 w-[523px] hidden md:block" />
+        <img src="/images/vector-leaf-bg.svg" className="absolute -top-10 right-28 w-[523px] hidden md:block" alt="" />
         <div className="flex max-md:flex-col max-md:justify-center max-md:text-center justify-around items-center pt-1 w-full">
             <div className="md:w-[450px]">
                 <h3 className="text-primary-400 font-bold">OUR MANDATE</h3>

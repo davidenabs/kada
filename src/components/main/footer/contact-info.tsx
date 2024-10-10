@@ -18,7 +18,7 @@ const ContactInformation: React.FC = () => {
       <h3 className="text-base font-bold leading-tight text-amber-300">Contact Information</h3>
       {contactItems.map((item, index) => (
         <div key={index} className="flex gap-4 items-center mt-6 tracking-wide whitespace-nowrap">
-          <img loading="lazy" src={item.icon} alt="" className="object-contain shrink-0 w-4 aspect-square" />
+          <img src={item.icon} alt="" className="object-contain shrink-0 w-4 aspect-square" />
           <p className="basis-auto">{item.text}</p>
         </div>
       ))}

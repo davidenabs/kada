@@ -7,7 +7,7 @@ type InputProps = {
   setValue: (value: string) => void;
   label?: string;
   error?: string;
-  [key: string]: any;
+  [key: string]: unknown;
 };
 
 const Select: React.FC<InputProps> = ({ options, className, value, setValue, label, error = "" }) => (

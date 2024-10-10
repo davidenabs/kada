@@ -1,9 +1,7 @@
 import PricingSection from '@/components/main/pricing-sections';
 import React from 'react'
 
-type Props = {}
-
-const Pricing = (props: Props) => {
+const Pricing = () => {
     return (
 
         <>

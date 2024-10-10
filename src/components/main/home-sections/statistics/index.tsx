@@ -11,7 +11,7 @@ const Statistics: React.FC<{ hasBg?: boolean }> = ({ hasBg = true }) => {
     <div className="app_container items-center flex flex-col md:flex-row overflow-x-hidden relative bg[#fefffd] pb-40 w-full pt-[123px] md:py-[165px] mb-20">
       {hasBg && <div className="absolute bg-[#FBFBFB] w-[1871.08px] h-[752.1px] left-[-283px] top-[50px] -rotate-[3.6deg] rounded-[50%]"></div>}
       {/* <img 
-        loading="lazy" 
+         
         src="https://cdn.builder.io/api/v1/image/assets/TEMP/d100969212fd7f1a8b51766245c99aae18d4d8346f2e90306c556519c7ccdc70?placeholderIfAbsent=true&apiKey=e3159558e3c24b7bb6f2db02f0873db3" 
         alt="" 
         className="absolute object-cover inset-0 size-full w-[1871.08px] h-[572.56px] -z-0" 

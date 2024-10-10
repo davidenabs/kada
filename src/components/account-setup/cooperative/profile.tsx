@@ -74,7 +74,7 @@ const CooperativeProfileSetup: React.FC<CooperativeProfileSetupProps> = ({ curre
                             src="/images/dashboard-sh.png"
                             alt="Dashboard Overview"
                             className="object-contain self-stretch mt-8 w-full aspect-[1.75] rounded-[32px] max-md:max-w-full"
-                            loading="lazy"
+
                         />
                     </>
                 );

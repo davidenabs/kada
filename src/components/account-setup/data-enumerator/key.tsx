@@ -11,7 +11,7 @@ const KeyValueArea: React.FC = () => {
 
                 <div className="flex self-stretch">
                     <img
-                        loading="lazy"
+
                         src={'/images/de-key-header.png'}
                         alt=""
                         className="object-contain shrink-0 max-w-full aspect[1.14] w-full"

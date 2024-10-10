@@ -1,11 +1,8 @@
-import Button from "@/components/form/button";
 import Link from "next/link";
 import React from "react";
 import { Title } from "rizzui";
 
-type Props = {}
-
-const MainHero = (props: Props) => {
+const MainHero = () => {
     return (
         <div
             className="pt-[123px] md:pt-[165px] app_container h-[694px] md:h-[844px] items-center flex flex-col md:flex-row"

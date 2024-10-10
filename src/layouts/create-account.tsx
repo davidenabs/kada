@@ -16,7 +16,7 @@ function CreateAccountLayout({ children }: { children: React.ReactNode }) {
         width < 992 ? (
           <main className="flex overflow-hidden flex-col px-6 py-7 mx-auto w-full bg-white max-w-[480px]">
             <div className="flex gap-5 justify-between text-base leading-tight text-black">
-              <img loading="lazy" src="/images/logo.svg" className="object-contain shrink-0 aspect-square w-[50px]" alt="" />
+              <img src="/images/logo.svg" className="object-contain shrink-0 aspect-square w-[50px]" alt="" />
               <Link href={"/sign-in"} className="my-auto hover:opacity-80 underline">Login here</Link>
             </div>
             <section className="flex flex-col self-start mt-9 leading-tight">
@@ -31,7 +31,7 @@ function CreateAccountLayout({ children }: { children: React.ReactNode }) {
           <section className="grid grid-cols-1 lg:grid-cols-3 items-start bg-white min-h-screen">
             <div className="flex flex-col max-md:mt-10 px-20 pt-10 w-full border-r self-stretch">
               <img
-                loading="lazy"
+
                 src="/images/logo.svg"
                 alt="Company logo"
                 className="object-contain aspect-square w-[50px]"
@@ -48,7 +48,7 @@ function CreateAccountLayout({ children }: { children: React.ReactNode }) {
             <div className="flex flex-col ml-5 w-full self-stretch max-md:ml-0 max-md:w-full">
               {/* dynamic image */}
               <img
-                loading="lazy"
+
                 src={
                   userType == 'farmer'
                     ? `/images/auth-farm-bg.png`

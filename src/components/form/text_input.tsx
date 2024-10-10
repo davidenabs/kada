@@ -15,7 +15,6 @@ const TextInput: FC<TextInputProps> = ({
   type = "text",
   label,
   placeholder,
-  icon,
   inputStyle,
   containerStyle,
   suffix,

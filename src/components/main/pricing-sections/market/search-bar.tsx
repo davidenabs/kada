@@ -3,9 +3,7 @@ import Input from '@/components/form/input';
 import { SearchIcon } from '@/icons';
 import React, { useState } from 'react';
 
-interface SearchBarProps { }
-
-const SearchBar: React.FC<SearchBarProps> = () => {
+const SearchBar = () => {
   const [search, setSearch] = useState("");
   return (
     <div className='space-y-2'>
@@ -13,7 +11,7 @@ const SearchBar: React.FC<SearchBarProps> = () => {
       <Input
         placeholder={'Search for market'}
         className='bg-white !border-teal-700 !py-3'
-        onChange={(e: any) => setSearch(e.target.value)}
+        onChange={(e: React.ChangeEvent<HTMLInputElement>) => setSearch(e.target.value)}
         onClear={() => setSearch("")}
         value={search}
         clearables

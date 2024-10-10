@@ -11,7 +11,7 @@ const About = () => {
         <main className="bg-primary-400/20">
             <div className="flex overflow-hidden flex-col pt-[73px] md:pt-[65px]">
                 <img
-                    loading="lazy"
+
                     src={'/images/header-banner.png'}
                     alt={'alt'}
                     className="object-contain w-full aspect-[7.41] max-md:max-w-full"
@@ -33,7 +33,7 @@ const About = () => {
                 <div className="flex justify-center  mt-10 w-full">
                     <div className="w-[65%] max-md:w-full">
                         <img
-                            loading="lazy"
+
                             src="https://cdn.builder.io/api/v1/image/assets/TEMP/426dc6926d519be041bb7ad3dbd1798ad3f80cd607a29721c8bc88eec5ea723e?placeholderIfAbsent=true&apiKey=e3159558e3c24b7bb6f2db02f0873db3"
                             alt="Kaduna State Agricultural Development Agency"
                             className="object-contain w-full aspect-[2.09] rounded-[32px] max-md:mt-10 max-md:max-w-full"

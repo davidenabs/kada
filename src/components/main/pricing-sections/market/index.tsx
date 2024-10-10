@@ -3,10 +3,7 @@ import SearchBar from './search-bar';
 import FilterDropdown from './filter';
 import MarketTable from './table';
 
-
-interface MarketInformationProps { }
-
-const MarketInformation: React.FC<MarketInformationProps> = () => {
+const MarketInformation: React.FC = () => {
     return (
         <section className="flex overflow-hidden flex-col px-10 pt-11 text-sm leading-tight rounded-lg bg-zinc-50 max-md:px-5 mt-10">
             <h1 className="self-start text-2xl font-semibold text-black">

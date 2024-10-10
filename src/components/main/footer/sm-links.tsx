@@ -18,7 +18,7 @@ const SocialMediaLinks: React.FC = () => {
       <h3 className="font-bold pb-3">Follow us on social media</h3>
       {socialMediaItems.map((item, index) => (
         <div key={index} className="flex gap-4 items-center my7 pl-4 w-full py-4 whitespace-nowrap max-md:ml-2.5">
-          <img loading="lazy" src={item.icon} alt={`${item.name} icon`} className="object-contain shrink-0 w-6 aspect-square" />
+          <img src={item.icon} alt={`${item.name} icon`} className="object-contain shrink-0 w-6 aspect-square" />
           <p className="my-auto">{item.name}</p>
         </div>
       ))}

@@ -1,11 +1,15 @@
 "use client"
 import Button from '@/components/form/button';
 import Input from '@/components/form/input';
+import { useRouter } from 'next/navigation';
 import React, { useState } from 'react';
-interface CertificationLicensePaymentProps { }
 
-const CertificationLicensePayment: React.FC<CertificationLicensePaymentProps> = () => {
+const CertificationLicensePayment: React.FC = () => {
     const [isPaid, setIsPaid] = useState(false);
+
+    const router = useRouter()
+
+    const route = '/dashboard/cooperative';
 
     if (isPaid)
         return (<section className="flex flex-col items-center font-bold rounded-none max-w-[467px] mx-auto">
@@ -16,7 +20,7 @@ const CertificationLicensePayment: React.FC<CertificationLicensePaymentProps> = 
                 please proceed to dashboard
             </p>
             <img
-                loading="lazy"
+
                 src="/images/payement-successful.png"
                 alt="Payment success illustration"
                 className="object-contain self-stretch mt-9 w-full aspect-[1.7]"
@@ -24,7 +28,7 @@ const CertificationLicensePayment: React.FC<CertificationLicensePaymentProps> = 
             <Button
                 className="!py-3 mt-14 !w-full min-h-[48px] !rounded-[60px]"
                 handleClick={() => {
-                    // Add navigation logic here
+                    router.push(route);
                 }}
             >
                 Go to Dashboard
@@ -77,7 +81,7 @@ const CertificationLicensePayment: React.FC<CertificationLicensePaymentProps> = 
                         </div>
                         <div className="flex flex-col md:ml-5 w-[54%] max-md:ml-0 max-md:w-full">
                             <img
-                                loading="lazy"
+
                                 src="/images/vendor-cert.png"
                                 alt="Certification and License illustration"
                                 className="object-contain mt-4 w-full rounded-3xl aspect-[1.54] max-md:mt-8 max-md:max-w-full"

@@ -11,7 +11,7 @@ const MonthCalendar: React.FC = () => {
         <section className="flex overflow-hidden flex-col px-14 py-11 text-xl font-semibold leading-tight text-black whitespace-nowrap bg-white rounded-lg max-w-[401px]">
             <div className="flex flex-col w-full">
                 <div className="flex gap-10 items-start">
-                    {months.slice(0, 3).map((month, index) => (
+                    {months.slice(0, 3).map((month) => (
                         <div key={month} className="flex flex-col flex-1">
                             <MonthButton month={month} isActive={month === 'FEB'} />
                         </div>

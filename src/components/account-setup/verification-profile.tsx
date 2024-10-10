@@ -17,7 +17,7 @@ const VerificationOption: React.FC<VerificationOptionProps> = ({ imageSrc, title
         <button
             onClick={() => onSelect(id)}
             className={`flex overflow-hidden gap-3.5 self-stretch py-5 pr-9 pl-4 mt-4 rounded-lg ${isSelected ? 'bg-white border border-teal-700 border-solid' : 'bg-neutral-50'} max-md:pr-5 transition-all ease-in-out`}>
-            <img loading="lazy" src={imageSrc} alt={`${title} icon`} className="object-contain shrink-0 aspect-square w-[62px]" />
+            <img src={imageSrc} alt={`${title} icon`} className="object-contain shrink-0 aspect-square w-[62px]" />
             <div className="flex flex-col self-start items-start mt-1.5">
                 <h3 className={`self-start text-base font-bold leading-tight ${isSelected ? 'text-green-800' : 'text-zinc-700'}`}>
                     {title}

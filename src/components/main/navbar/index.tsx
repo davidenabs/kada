@@ -1,15 +1,13 @@
 "use client";
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useCallback } from "react";
 import Link from "next/link";
 import { Lock, Logo, Hamburger, CloseIcon } from "@/icons"; // Assume `Hamburger` and `CloseIcon` are valid icons
 import Button from "@/components/form/button";
 import useScreenSize from "@/hooks/use-screen-size";
 import { useAtom, useSetAtom } from "jotai";
 import { appAtom, openNavDrawerAtom } from "@/stores/app";
-import { userAtom } from "@/stores/user";
-// import { useRouter } from "next/router";
 import cn from "@/utils/class_names";
-import { usePathname, useRouter } from "next/navigation";
+import { usePathname } from "next/navigation";
 
 interface NavItemProps {
   text: string;
@@ -29,7 +27,7 @@ const NavItem: React.FC<NavItemProps> = ({ text, isActive, route }) => {
 };
 
 const navItems: NavItemProps[] = [
-  { text: "Home", route: "/"},
+  { text: "Home", route: "/" },
   { text: "About Kada", route: "/about-kada" },
   { text: "Our Services", route: "/services" },
   { text: "Pricing Information", route: "/pricing" },
@@ -38,18 +36,14 @@ const navItems: NavItemProps[] = [
 
 const Navbar: React.FC = () => {
   const { width } = useScreenSize();
-  const [app, _] = useAtom(appAtom);
-  const [user, setUser] = useAtom(userAtom);
+  const [app,] = useAtom(appAtom);
   const updateNavDrawer = useSetAtom(openNavDrawerAtom);
-  const [isClient, setIsClient] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false); // State to toggle mobile menu
-  // const router = useRouter();
-  // const [currentPath, setCurrentPath] = useState(null);
   const currentPath = usePathname()
 
-  const handleCloseNavDrawer = () => {
+  const handleCloseNavDrawer = useCallback(() => {
     updateNavDrawer(false);
-  };
+  }, [updateNavDrawer]); // Memoize the function to avoid recreating it on every render
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
@@ -59,8 +53,7 @@ const Navbar: React.FC = () => {
     if (app.openNavDrawer) {
       handleCloseNavDrawer();
     }
-    setIsClient(true);
-  }, [app.openNavDrawer]);
+  }, [app.openNavDrawer, handleCloseNavDrawer]);
 
   return (
     <>

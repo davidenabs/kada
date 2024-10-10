@@ -4,9 +4,8 @@ import MonthCalendar from '@/components/main/pricing-sections/calender/month-cal
 import CalendarView from '@/components/main/pricing-sections/calender/view';
 import React from 'react'
 
-type Props = {}
 
-const Calendar = (props: Props) => {
+const Calendar = () => {
 
     return (
         <div className='bg-[#F2F9F5]/50 app_container py-[113px] md:py-[135px]'>
@@ -25,7 +24,7 @@ const Calendar = (props: Props) => {
                     <div className="flex flex-col mt-3 w-full text-xs leading-tight text-zinc-700 max-md:mt-10 max-md:max-w-full">
                         <CalendarLegend />
                         <img
-                            loading="lazy"
+
                             src="https://cdn.builder.io/api/v1/image/assets/TEMP/a130cf849fd030a1a238147373f1297020e9917b40b8106b7c10c56a67adcecd?placeholderIfAbsent=true&apiKey=e3159558e3c24b7bb6f2db02f0873db3"
                             alt="Detailed Cropping Calendar"
                             className="object-contain mt-7 w-full rounded-lg aspect-[0.74] max-md:max-w-full"

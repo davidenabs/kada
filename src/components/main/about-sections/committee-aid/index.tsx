@@ -11,9 +11,7 @@ import 'swiper/css/pagination';
 import 'swiper/css/scrollbar';
 import Button from '@/components/form/button';
 
-interface CommunityAidsProps { }
-
-const CommunityAids: React.FC<CommunityAidsProps> = () => {
+const CommunityAids: React.FC = () => {
     const committeeMembers = [
         { name: 'John Doe', role: 'Committee chairman KALAC', imageSrc: '/images/rili.png' },
         { name: 'John Doe', role: 'Committee chairman KALAC', imageSrc: '/images/rili.png' },

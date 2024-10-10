@@ -1,5 +1,4 @@
 import AppLoader from "@/components/shared/loader";
-import { Logo } from "@/icons";
 import React from "react";
 
 const Loading = () => {

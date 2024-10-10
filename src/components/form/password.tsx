@@ -1,10 +1,10 @@
-import { Password as RizzPassword, Textarea as RizzTextarea } from 'rizzui';
+import { Password as RizzPassword } from 'rizzui';
 
 type PasswordProps = {
     placeholder: string;
     className?: string;
     error?: string;
-    [key: string]: any;
+    [key: string]: unknown;
 };
 
 const Password: React.FC<PasswordProps> = ({ placeholder, className, error = "", ...props }) => (
