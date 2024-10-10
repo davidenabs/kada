@@ -60,7 +60,7 @@ const ContactUs: React.FC = () => {
     return (
         <main className="flex flex-col items-center pt[123px] py-[75px]">
             <header className="flex relative flex-col justify-center items-center self-stretch px-20 py-64 w-full font-bold min-h-[686px] max-md:px-5 max-md:py-24 max-md:max-w-full">
-                <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/8b2a36eab1c67559c8c98d759a4e4a9072e4e047074b1c6113f7504c4cf0553d?placeholderIfAbsent=true&apiKey=e3159558e3c24b7bb6f2db02f0873db3" alt="" className="object-cover absolute inset-0 size-full" />
+                <img loading="lazy" src="/images/contact-header-banner.png" alt="" className="object-cover absolute inset-0 size-full" />
                 <div className="flex relative flex-col mb-0 w-full max-w-[1107px] max-md:mb-2.5 max-md:max-w-full">
                     <h1 className="self-center text-3xl leading-tight text-amber-300">
                         CONTACT US

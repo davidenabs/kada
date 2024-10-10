@@ -83,6 +83,9 @@ const config: Config = {
         xl: "1200px",
         "2xl": "1440px",
       },
+      animation: {
+        'spin-slow': 'spin 3s linear infinite',
+      }
     },
   },
   plugins: [

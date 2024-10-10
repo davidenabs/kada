@@ -18,12 +18,6 @@ const Calendar = (props: Props) => {
                             Cropping Calendar
                         </h1>
                         <MonthCalendar />
-                        {/* <img
-                            loading="lazy"
-                            src="https://cdn.builder.io/api/v1/image/assets/TEMP/223d0f844178d2145fa21521d52d1dd61f17821e88a4bf43f98ad668b740db48?placeholderIfAbsent=true&apiKey=e3159558e3c24b7bb6f2db02f0873db3"
-                            alt="Cropping Calendar visualization"
-                            className="object-contain mt-9 w-full rounded-lg aspect-[0.87]"
-                        /> */}
                         <CalendarKey />
                     </div>
                 </section>

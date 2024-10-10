@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import "./styles/globals.css";
 import PreviousPathnameProvider from "@/provider/previous-pathname";
 import cn from "@/utils/class_names";
+import { Suspense } from "react";
 
 export const metadata: Metadata = {
   title: "KADA",
@@ -22,12 +23,11 @@ export default function RootLayout({
       >
 
         <PreviousPathnameProvider>
+          <Suspense fallback={<div className="">Loading...</div>}>
             <main className="relative">
               {children}
-              {/* {modal}
-          <GlobalDrawer />
-          <GlobalModal /> */}
             </main>
+          </Suspense>
         </PreviousPathnameProvider>
       </body>
     </html>

@@ -14,7 +14,7 @@ const Input: React.FC<InputProps> = ({ type = "text", placeholder, className, er
       type={type}
       placeholder={placeholder}
       className={``}
-      inputClassName={`px-5 py-8 ring-0 border--400 bg-[#F9F9F9] rounded-[60px] max-md:px-5 max-md:max-w-full border-0 ${className}`}
+      inputClassName={`px-5 py8 ring-0 border--400 bg-[#F9F9F9] rounded-[60px] max-md:px-5 max-md:max-w-full border-0 ${className}`}
       aria-label={placeholder}
       {...props}
     />

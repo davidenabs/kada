@@ -4,10 +4,8 @@ import DataEForm from '@/components/auth/create-account/forms/data-enumerator';
 import FarmerForm from '@/components/auth/create-account/forms/farmer';
 import GuestForm from '@/components/auth/create-account/forms/guest';
 import AppLoader from '@/components/shared/loader';
-import UseLoaded from '@/hooks/use-loaded';
 import useUserType from '@/hooks/use-user-type';
-import { useSearchParams } from 'next/navigation';
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 
 const CreateAccountPage: React.FC = () => {
     const { userType, loaded } = useUserType();

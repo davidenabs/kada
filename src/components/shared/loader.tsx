@@ -16,11 +16,21 @@ const FullPageLoader = () => {
 const AppLoader = () => {
   return (
     <Fragment>
-      <div className="relative">
-        <Logo className="w-8 h-8 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2" />
-        <div className="custom-loader" />
+      <div className="flex items-center justify-center min-hscreen my-auto ">
+        <div className="relative flex items-center justify-center w-[163px] h-[163px] bg-white rounded-full">
+          {/* Loading Spinner */}
+          <div className="absolute inset-0 flex items-center justify-center rounded-full">
+            <div className="w-full h-full border-[8px] border-[#D7F5E5] border-t-[#0BCE6B] rounded-full animate-spin-slow"></div>
+          </div>
+
+          {/* Logo */}
+          <div className="relative">
+            <Logo className="w-[100.64px] h-[101.07px]" />
+          </div>
+        </div>
       </div>
     </Fragment>
+
   );
 };
 
