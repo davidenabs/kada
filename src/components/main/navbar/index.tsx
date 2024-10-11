@@ -8,6 +8,7 @@ import { useAtom, useSetAtom } from "jotai";
 import { appAtom, openNavDrawerAtom } from "@/stores/app";
 import cn from "@/utils/class_names";
 import { usePathname } from "next/navigation";
+import { Bars3Icon } from "@heroicons/react/16/solid";
 
 interface NavItemProps {
   text: string;
@@ -77,7 +78,7 @@ const Navbar: React.FC = () => {
               {isMenuOpen ? (
                 <CloseIcon className="h-6 w" />
                 // <Hamburger className="h-6 w-6" />
-              ) : (<Hamburger className="h-6 w-6" />)}
+              ) : (<Bars3Icon className="h-6 w-6 fill-black" />)}
             </button>
           ) : (
             // Full Navigation for Larger Screens
