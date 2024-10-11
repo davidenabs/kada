@@ -1,3 +1,4 @@
+"use client"
 import { Select as RizzSelect } from 'rizzui';
 
 type InputProps = {

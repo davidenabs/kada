@@ -1,7 +1,8 @@
+"use client"
 import KeyValueArea from '@/components/account-setup/data-enumerator/key';
 import React from 'react';
 
-const DataEnumeratorPage: React.FC = () => {
+const DataEnumeratorPage = () => {
     return (
         <KeyValueArea />
     );

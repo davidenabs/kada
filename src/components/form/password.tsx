@@ -1,3 +1,4 @@
+"use client"
 import { Password as RizzPassword } from 'rizzui';
 
 type PasswordProps = {

@@ -1,7 +1,7 @@
 "use client";
 import React, { useState, useEffect, useCallback } from "react";
 import Link from "next/link";
-import { Lock, Logo, Hamburger, CloseIcon } from "@/icons"; // Assume `Hamburger` and `CloseIcon` are valid icons
+import { Lock, Logo, CloseIcon } from "@/icons"; // Assume `Hamburger` and `CloseIcon` are valid icons
 import Button from "@/components/form/button";
 import useScreenSize from "@/hooks/use-screen-size";
 import { useAtom, useSetAtom } from "jotai";

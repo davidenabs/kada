@@ -1,3 +1,4 @@
+"use client"
 import { Input as RizzInput } from 'rizzui';
 
 type InputProps = {

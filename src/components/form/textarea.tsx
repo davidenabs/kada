@@ -1,3 +1,4 @@
+"use client"
 import { Textarea as RizzTextarea } from 'rizzui';
 
 type InputProps = {

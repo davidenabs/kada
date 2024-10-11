@@ -1,3 +1,4 @@
+"use client"
 import React, { Fragment } from 'react';
 
 function AccountSetupLayout({ children }: { children: React.ReactNode }) {
