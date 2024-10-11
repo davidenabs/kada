@@ -9,3 +9,5 @@ export { default as SearchIcon } from "./search.svg";
 export { default as OfficeIcon } from "./office.svg";
 export { default as UserIcon } from "./user.svg";
 export { default as UsersIcon } from "./users.svg";
+export { default as PlusIcon } from "./plus.svg";
+export { default as ArrowRightIcon } from "./arrow-right.svg";

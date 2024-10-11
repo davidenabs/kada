@@ -19,12 +19,12 @@ const Overview: React.FC = () => {
     return (
         <section>
             <h2 className="self-start text-lg font-medium leading-tight text-black">Overview</h2>
-            <div className="flex flex-wrap gap-5 justify-between mt-2.5 text-green-950">
+            <div className="flex flex-wrap items-start gap-5 md:justify-normal lg:justifybetween mt-2.5 text-green-950">
                 {overviewItems.map((item, index) => (
                     <div key={index} className={`flex overflow-hidden flex-col items-center px-9 py-7 ${item.bgColor} rounded-md h-[178px] w-[178px] max-md:px-5`}>
                         <img src={item.icon} alt="" className="object-contain aspect-[1.14] w-[33px]" />
-                        <div className="mt-5 text-3xl font-bold leading-tight">{item.count}</div>
-                        <div className="text-base font-medium leading-5 text-center">{item.label}</div>
+                        <div className="mt-5 text-2xl font-bold leading-tight">{item.count}</div>
+                        <div className="font-medium leading-5 text-sm text-center">{item.label}</div>
                     </div>
                 ))}
             </div>
