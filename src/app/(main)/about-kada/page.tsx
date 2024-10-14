@@ -34,7 +34,7 @@ const About = () => {
                     <div className="w-[65%] max-md:w-full">
                         <img
 
-                            src="https://cdn.builder.io/api/v1/image/assets/TEMP/426dc6926d519be041bb7ad3dbd1798ad3f80cd607a29721c8bc88eec5ea723e?placeholderIfAbsent=true&apiKey=e3159558e3c24b7bb6f2db02f0873db3"
+                            src="/images/two-wemen-farming.png"
                             alt="Kaduna State Agricultural Development Agency"
                             className="object-contain w-full aspect-[2.09] rounded-[32px] max-md:mt-10 max-md:max-w-full"
                         />
@@ -61,17 +61,6 @@ const About = () => {
             <ForIndividuals />
             <FarmManagementFeatures />
             <CommunityAids />
-
-            {/* <div
-                className="pt-[123px] md:pt-[165px] app_container h-[694px] md:h-[844px] items-center flex flex-col md:flex-row"
-                style={{
-                    backgroundImage: `url("/images/bg.png")`,
-                    backgroundRepeat: "no-repeat",
-                    backgroundSize: "cover",
-                    backgroundPosition: "center", // Ensure image is centered
-                }}
-            >
-            </div> */}
 
         </main>
     );

@@ -15,7 +15,7 @@ const MainHero = () => {
         >
             <main className="flex md:justify-between  justify-center  my-auto w-full flex-col md:flex-row md:text-left text-center">
                 <section className="flex flex-col max-md:max-w-full ">
-                    <Title as="h1" className="text-base font-normal md:text-xl leading-none text-center text-white uppercase max-md:mr-2.5 max-md:max-w-full">
+                    <Title as="h1" className="text-base font-normal md:text-xl leading-none text-center text-white uppercase maxmd:mr-2.5 max-md:max-w-full">
                         For food security and national development
                     </Title>
                     <Title as="h2" className="mt-16 md:mt-8 font-normal md:text-5xl tracking- leading-[50px] text-white  max-md:text-3xl max-md:leading-10 font- w[343px] md:w-[504px]">

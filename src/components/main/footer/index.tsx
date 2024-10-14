@@ -71,7 +71,7 @@ const Footer: React.FC = () => {
             <div className="flex relative justify-center items-center flex-col grow px-20 pt-7 pb-36 text-white min-h-[731px] max-md:px-5 max-md:pb-24 max-md:mt-8">
               <img
 
-                src="https://cdn.builder.io/api/v1/image/assets/TEMP/04e423740b820e188208f34c301a17cc209800289a6f590330aaec2296b5e9bf?placeholderIfAbsent=true&apiKey=e3159558e3c24b7bb6f2db02f0873db3"
+                src="/images/footer-bg.png"
                 alt=""
                 className="object-cover absolute inset-0 w-full h-full"
               />
