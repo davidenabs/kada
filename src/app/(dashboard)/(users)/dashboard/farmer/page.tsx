@@ -56,7 +56,7 @@ const CooperativeDashboard: React.FC = () => {
 
             <div className="flex flex-col ml-5 w-[61%] max-md:ml-0 max-md:w-full" >
               <div className="flex justify-end items-center grow text-base font-bold leading-none  max-md:mt-10 " >
-                <img loading="lazy" src="/images/famer-vector-curvy.svg" alt="Farming illustration" className="object-contain absolute grow shrink-0 aspect[1.68] basis-0 w-fit" />
+                <img loading="lazy" src="/images/famer-vector-curvy.svg" alt="Farming illustration" className="object-contain absolute grow shrink-0 aspect[1.68] basis-0 w-fit max-md:hidden" />
                 <Button handleClick={() => handleOpenModal()} className="!w-fit !rounded-full !py-3 !px-3 !shadow-none !bg-white !text-green-800 self-center z-10 flex gap-2"><span>Create Farm</span> <PlusIcon className="w-4 h-4" /></Button>
               </div>
             </div>

@@ -18,7 +18,7 @@ const WeatherWidget: React.FC = () => {
             <div className="flex grow gap-2 items-center text-2xl font-light leading-tight text-black whitespace-nowrap max-md:mt-10">
               <div className="self-stretch my-auto">24</div>
               <div className="self-stretch my-auto">c</div>
-              <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/4d7ce19220f597a81b2fd41c508c5c5b236806cef7d88ff6e90a855157a9739d?placeholderIfAbsent=true&apiKey=e3159558e3c24b7bb6f2db02f0873db3" alt="Weather icon" className="object-contain shrink-0 self-stretch aspect-square w-[81px]" />
+              <img loading="lazy" src="/images/sun.svg" alt="Weather icon" className="object-contain shrink-0 self-stretch aspect-square w-[81px]" />
             </div>
           </div>
         </div>

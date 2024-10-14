@@ -5,6 +5,7 @@ import useScreenSize from "@/hooks/use-screen-size";
 import cn from "@/utils/class_names";
 import Link from "next/link";
 import { Badge } from "rizzui";
+import { ArrowLeftEndOnRectangleIcon } from "@heroicons/react/16/solid";
 
 interface MenuItem {
   icon: string;
@@ -78,24 +79,36 @@ const Sidebar: React.FC = () => {
             <Link
               key={index}
               href={item.href}
-              className={`flex items-center gap-2 my-3 ml- text- font- px-5    w-full
-              ${isActive ? 'text-white bg-green-600 rounded-xl py-2.5 ' : 'text-zinc-700'}
-              max-md:ml-2.5`}
+              className={cn(
+                "flex items-center gap-2 my-3 ml- text- font- px-5 w-full",
+                isActive ? "text-white bg-green-600 py-2.5" : "text-zinc-700",
+                "max-md:ml-2.5",
+                isAdminRoute ? "rounded-full" : "rounded-xl"
+              )}
             >
               <img
                 src={item.icon}
                 alt={`${item.label}`}
                 className="object-contain shrink-0 self-center aspect-square w-[18px] fill-re-800"
               />
-              <div className="flex justify-between items-center w-full">
+              <div className="flex gap-3 items-center w-full">
                 <div>{item.label}</div>
                 {item.addons && (
-                  <Badge variant="outline" color="success">{item.addons}</Badge>
+                  <Badge variant="outline" color="success" className="-0">{item.addons}</Badge>
                 )}
               </div>
             </Link>
           );
         })}
+
+        <div className="flex gap-4 items-center self-stretch py-2.5 pr-8 px-2 mt-52  max-md:mt-10">
+          <Link href={'/portal'} className="flex gap-2 items-center w-full hover:underline text-zinc-700">
+
+            <ArrowLeftEndOnRectangleIcon className="w-4 text-zinc-700" />
+
+            <div>Logout</div>
+          </Link>
+        </div>
       </nav>
     </aside>
   );
