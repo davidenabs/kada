@@ -68,7 +68,7 @@ const Navbar: React.FC = () => {
       <header className="fixed w-full z-[999]">
         <div className="flex justify-between items-center h-[90px] lg:h-[121px] app_container relative z-[999] leading-tight bg-[#F2F9F5] !backdrop-blur-lg">
           {/* Logo */}
-          <Logo className="h-[66.49px] w-[66px]" />
+          <Logo className={cn(width < 1024 ? "h-[46.49px] w-[46px]" : "h-[66.49px] w-[66px]")} />
 
           {/* Hamburger Icon for Mobile Screens */}
           {width < 1024 ? (
