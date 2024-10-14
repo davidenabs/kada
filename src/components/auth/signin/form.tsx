@@ -24,7 +24,7 @@ const SignInForm: React.FC = () => {
         <Input placeholder="Email" id="email" className='!py-3 !px-5 !w-[369px] mt-6' />
 
         <label htmlFor="password" className="sr-only">Password</label>
-        <Password placeholder="Email" id="email" className='!py-3 !px-5 !w-[369px] mt-2' />
+        <Password placeholder="********" id="email" className='!py-3 !px-5 !w-[369px] mt-2' />
 
         <Button className='!py-3 mt-8 !rounded-full '>Sign in</Button>
         <Link href="#" className="self-end mt-2 text-sm font-light text-black">Forgot Password?</Link>

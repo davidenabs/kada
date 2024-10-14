@@ -7,7 +7,7 @@ import useScreenSize from "@/hooks/use-screen-size";
 import { useAtom, useSetAtom } from "jotai";
 import { appAtom, openNavDrawerAtom } from "@/stores/app";
 import cn from "@/utils/class_names";
-import { usePathname } from "next/navigation";
+import { usePathname, useRouter } from "next/navigation";
 import { Bars3Icon } from "@heroicons/react/16/solid";
 
 interface NavItemProps {
@@ -41,6 +41,7 @@ const Navbar: React.FC = () => {
   const updateNavDrawer = useSetAtom(openNavDrawerAtom);
   const [isMenuOpen, setIsMenuOpen] = useState(false); // State to toggle mobile menu
   const currentPath = usePathname()
+  const router = useRouter();
 
   const handleCloseNavDrawer = useCallback(() => {
     updateNavDrawer(false);
@@ -110,7 +111,7 @@ const Navbar: React.FC = () => {
                 </li>
               ))}
               <li>
-                <Button className="flex w-[146px] h-[45px] gap-2.5 justify-center items-center  !px-5 !py-0 my-auto font-bold text-white !rounded-full">
+                <Button handleClick={() => router.push('/portal')} className="flex w-[146px] h-[45px] gap-2.5 justify-center items-center  !px-5 !py-0 my-auto font-bold text-white !rounded-full">
                   <span className="self-stretch my-auto">Kada Portal</span>
                   <Lock className="my-auto aspect-square w-[18px]" />
                 </Button>
@@ -124,99 +125,3 @@ const Navbar: React.FC = () => {
 };
 
 export default Navbar;
-
-
-
-
-
-
-// "use client";
-// import React from "react";
-// import Link from "next/link";
-// import { Lock, Logo } from "@/icons";
-// import Button from "@/components/form/button";
-// import useScreenSize from "@/hooks/use-screen-size";
-// import { useAtom, useSetAtom } from "jotai";
-// import { appAtom, openNavDrawerAtom } from "@/stores/app";
-// import { userAtom } from "@/stores/user";
-// import { useRouter } from "next/navigation";
-// // import { Logo } from "@/icons";
-
-// // import { Logo } from "@/icons"; // Make sure this import points to the correct icon location
-
-// interface NavItemProps {
-//   text: string;
-//   route: string;
-//   isActive?: boolean;
-// }
-
-// const NavItem: React.FC<NavItemProps> = ({ text, isActive, route }) => {
-//   return (
-//     <Link href={route} className={isActive ? "font-bold text-teal-700" : ""}>
-//       {text}
-//     </Link>
-//   );
-// };
-
-// const navItems: NavItemProps[] = [
-//   { text: "Home", route: "/", isActive: true },
-//   { text: "About Kada", route: "/about" },
-//   { text: "Our Services", route: "/services" },
-//   { text: "Pricing Information", route: "/pricing" },
-//   { text: "Contact Us", route: "/contact" },
-// ];
-
-// const Navbar: React.FC = () => {
-//   const { width } = useScreenSize();
-//   const [app, _] = useAtom(appAtom);
-//   const [user, setUser] = useAtom(userAtom);
-//   const updateNavDrawer = useSetAtom(openNavDrawerAtom);
-//   const [isClient, setIsClient] = React.useState(false);
-//   const router = useRouter();
-
-//   const handleCloseNavDrawer = () => {
-//     updateNavDrawer(false);
-//   };
-
-//   React.useEffect(() => {
-//     if (app.openNavDrawer) {
-//       handleCloseNavDrawer();
-//     }
-
-//     setIsClient(true);
-//   }, []);
-
-//   return (
-//     <>
-//      {app.openNavDrawer && (
-//         <div
-//           className="absolute h-full w-full inset-0 bg-black opacity-50 cursor-pointer z-[99]"
-//           onClick={handleCloseNavDrawer}
-//         />
-//       )}
-//     <header className="fixed w-full z-[999]">
-//       {/* flex overflow-hidden flex-col justify-center items-center px-16 py-3 text-sm leading-tight bg-green-50 max-md:px-5 */}
-//       <div className="flex justify-normal lg:justify-between items-center h-[90px] lg:h-[121px] app_container relative z-[999] leading-tight bg-primary-100">
-
-//         <div className="flex gap-5 justify-between items-center w-full max-w-[1228px] max-md:max-w-full">
-//           <Logo className="object-contain shrink-0 self-stretch aspect-square h-[66.49px] w-[66px]" />
-//           <nav className="flex gap-10 self-stretch my-auto text-zinc-700 max-md:max-w-full">
-//             {navItems.map((item, index) => (
-//               <NavItem key={index} {...item} />
-//             ))}
-//           </nav>
-//           {/* Uncomment the button if needed */}
-//           <div>
-//             <Button className="flex w-[146px] h-[45px] gap-2.5 justify-center items-center  !px-5 !py-0 my-auto font-bold text-white !rounded-full">
-//               <span className="self-stretch my-auto">Kada Portal</span>
-//               <Lock className="my-auto aspect-square w-[18px]" />
-//             </Button>
-//           </div>
-//         </div>
-//       </div>
-//     </header>
-//     </>
-//   );
-// };
-
-// export default Navbar;
