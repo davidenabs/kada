@@ -10,7 +10,7 @@ import { Title } from 'rizzui';
 const SignInForm: React.FC = () => {
   const router = useRouter();
   return (
-    <div className='my-auto bg-white px-12 py-10 rounded-lg self-center shadow-lg'>
+    <div className='my-auto bg-white px-12 max-md:px-5 py-10 rounded-lg self-center shadow-lg'>
 
       <div className='flex flex-col items-center space-y-2'>
         <img src="/images/logo.svg" alt="" className='w-[66px]' />
