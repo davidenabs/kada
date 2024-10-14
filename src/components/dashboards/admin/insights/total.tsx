@@ -9,11 +9,6 @@ const TotalAmount: React.FC = () => {
         <div className="flex gap-1 items-center">
           <div className="gap-2.5 self-start p-2.5 text-black">Distribution by</div>
           <Select options={[]} value={'Gender'} setValue={() => {}}  className="!py-3 !border !bg-white !px-2 !rounded"></Select>
-          
-          {/* <div className="flex gap-2.5 justify-center items-center px-2 py-2.5 whitespace-nowrap rounded border-zinc-700 text-zinc-700">
-            <div className="self-stretch my-auto">Gender</div>
-            <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/f1c54c2a0774b828f50b59f1f31ef01713d8b702e5785e980100fd74956f04f7?placeholderIfAbsent=true&apiKey=e3159558e3c24b7bb6f2db02f0873db3" alt="" className="object-contain shrink-0 self-stretch my-auto aspect-square w-[18px]" />
-          </div> */}
         </div>
       </div>
       <div className="flex flex-col self-start mt-8 text-zinc-700">

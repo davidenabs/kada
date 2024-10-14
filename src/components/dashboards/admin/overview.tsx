@@ -44,7 +44,7 @@ const SustainableAgricultureCard: React.FC = () => {
 const StatisticsDisplay: React.FC<StatisticsDisplayProps> = ({ statisticsData }) => {
   return (
     <section className="rounded flex">
-      <div className="flex flex-wrap md:gap-5 max-md:flex-col bg-black">
+      <div className="flex flex-wrap md:gap-5 max-md:flex-col">
         {statisticsData.map((stat, index) => (
           <div key={index} className="flex flex-col w-3/12 max-md:ml-0 max-md:w-full">
             <StatisticsCard

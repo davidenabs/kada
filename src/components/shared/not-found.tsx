@@ -1,7 +1,9 @@
 "use client";
 import React from "react";
 import { useRouter } from "next/navigation";
-import { Title, Button } from "rizzui";
+import { Title } from "rizzui";
+import Button from "../form/button";
+import { ArrowLeftIcon } from "@heroicons/react/16/solid";
 
 const NotFoundPage = () => {
   const router = useRouter();
@@ -24,12 +26,10 @@ const NotFoundPage = () => {
           </p>
 
           <Button
-            size="xl"
-            color="primary"
-            className="mt-8 h-12 px-4 xl:h-14 xl:px-6"
-            onClick={() => router.back()}
+            className="mt-8 !px-4 !py-2 !rounded-full !w-fit"
+            handleClick={() => router.back()}
           >
-            Go Back
+            <span className="flex gap-2 items-center"><ArrowLeftIcon className="w-4"/> <span>Go Back</span></span>
           </Button>
         </div>
       </div>

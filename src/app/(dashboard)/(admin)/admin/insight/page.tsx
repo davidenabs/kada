@@ -42,13 +42,6 @@ const AdminRequestPage: React.FC = () => {
         </div>
       </section>
     </div>
-    // <div className='space-y-3'>
-    //   <div className="self-start text-sm font-bold text-zinc-700 max-md:hidden">
-    //     General Overview
-    //   </div>
-    //   <Overview statisticsData={statisticsData} />
-    //   <RequestTable />
-    // </div>
   );
 };
 

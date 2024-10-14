@@ -4,11 +4,13 @@ import { usePathname } from "next/navigation";
 import useScreenSize from "@/hooks/use-screen-size";
 import cn from "@/utils/class_names";
 import Link from "next/link";
+import { Badge } from "rizzui";
 
 interface MenuItem {
   icon: string;
   label: string;
   href: string;
+  addons?: string;
 }
 
 const basePath = "/dashboard/cooperative";
@@ -19,7 +21,7 @@ const adminMenuItems: MenuItem[] = [
   { icon: "/images/home-icon.svg", label: "Dashboard", href: adminBasePath },
   { icon: "/images/home-icon.svg", label: "Farmers", href: `${adminBasePath}/members` },
   { icon: "/images/home-icon.svg", label: "Cooperative", href: `${adminBasePath}/cooperative` },
-  { icon: "/images/home-icon.svg", label: "Requests", href: `${adminBasePath}/requests` },
+  { icon: "/images/home-icon.svg", label: "Requests", href: `${adminBasePath}/requests`, addons: '3' },
   { icon: "/images/home-icon.svg", label: "Insight", href: `${adminBasePath}/insight` },
 ];
 
@@ -76,16 +78,21 @@ const Sidebar: React.FC = () => {
             <Link
               key={index}
               href={item.href}
-              className={`flex items-center gap-2 my-3 ml- text- font- px-5 whitespace-nowrap
-              ${isActive ? 'text-white bg-green-600 rounded-xl py-2.5 self-stretch w-full' : 'text-zinc-700'}
+              className={`flex items-center gap-2 my-3 ml- text- font- px-5    w-full
+              ${isActive ? 'text-white bg-green-600 rounded-xl py-2.5 ' : 'text-zinc-700'}
               max-md:ml-2.5`}
             >
               <img
                 src={item.icon}
-                alt={`${item.label} icon`}
+                alt={`${item.label}`}
                 className="object-contain shrink-0 self-center aspect-square w-[18px] fill-re-800"
               />
-              <div>{item.label}</div>
+              <div className="flex justify-between items-center w-full">
+                <div>{item.label}</div>
+                {item.addons && (
+                  <Badge variant="outline" color="success">{item.addons}</Badge>
+                )}
+              </div>
             </Link>
           );
         })}

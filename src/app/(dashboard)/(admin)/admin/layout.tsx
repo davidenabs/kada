@@ -1,7 +1,7 @@
 "use client";
 import BottomNavigation from "@/components/dashboards/cooperative/bottom-nav";
-import Header from "@/components/dashboards/cooperative/header";
-import Sidebar from "@/components/dashboards/cooperative/sidebar";
+import Header from "@/components/dashboards/header";
+import Sidebar from "@/components/dashboards/sidebar";
 import AppLoader from "@/components/shared/loader";
 import React, { Suspense } from "react";
 
