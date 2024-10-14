@@ -93,7 +93,7 @@ const Navbar: React.FC = () => {
           {/* Button (always visible on large screens, hidden on mobile) */}
           {width >= 1024 && (
             <div>
-              <Button className="flex w-[146px] h-[45px] gap-2.5 justify-center items-center  !px-5 !py-0 my-auto font-bold text-white !rounded-full">
+              <Button handleClick={() => router.push('/portal')} className="flex w-[146px] h-[45px] gap-2.5 justify-center items-center  !px-5 !py-0 my-auto font-bold text-white !rounded-full">
                 <span className="self-stretch my-auto">Kada Portal</span>
                 <Lock className="my-auto aspect-square w-[18px]" />
               </Button>
