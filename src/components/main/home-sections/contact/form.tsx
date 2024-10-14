@@ -12,8 +12,8 @@ const ContactForm: React.FC = () => {
       <p className="self-start mt-2 text-lg font-semibold leading-snug text-green-600">
         Reach out to us for enquiry
       </p>
-      <Input placeholder="Full Name" className="mt-7" />
-      <Input placeholder="Your email" className="mt-10" />
+      <Input placeholder="Full Name" className="mt-7 !py-8" />
+      <Input placeholder="Your email" className="mt-10 !py-8" />
       {/* <Textarea */}
       <Textarea
         placeholder="Your Message"
